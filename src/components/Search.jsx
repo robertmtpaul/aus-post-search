@@ -7,6 +7,7 @@ const Search = (props) => {
 
 	const handleInput = (ev) => {
 		setSearchPostcode(ev.target.value);
+		console.log(setSearchPostcode)
 	}
 
 	// const handleSubmit = () => {
@@ -17,11 +18,14 @@ const Search = (props) => {
 
 	return (
 		<div>
+			<h1>Search address in Australia Post database</h1>
 			<label>Search by Postcode</label>
 			<input type="text" onChange={handleInput} />
+			<p>
+				Typed: { searchPostcode }
+			</p>
 		</div>
 	)
-
 
 
 } // Search()
