@@ -27,5 +27,5 @@ You can try typing in a postcode and hitting Search Address, however due to lack
 - Fix AustpostSearch.jsx so that hooks are used correctly or refactor as a class-based component
 - Fix API call using axios
 - Use react-form-hooks library for form validation and simplifying saving of entered data into state
-- Set up testing of form validation using enzyyme
+- Set up testing of form validation using enzyme
 - Style up form using CSS, Bootstrap and add icons with Fontawesome
