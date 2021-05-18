@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import axios from "axios";
-import AustPostSearch from './AustPostSearch'
+import React, { useState, useEffect } from "react";
+import AustpostSearch from './AustpostSearch'
 
 const SearchForm = () => {
   //Pass to useState the initial value I want for this state
@@ -17,7 +16,7 @@ const SearchForm = () => {
   // };
 
   const handleSubmit = () => {
-    // AustPostSearch();
+    AustpostSearch();
   };
 
   return (
@@ -43,10 +42,9 @@ const SearchForm = () => {
         {/* TODO: add CSS breaks */}
         <button onClick={handleSubmit}>Search address</button>
       </form>
-      {/* TODO: remove below code */}
-      <h3>Tests:</h3>
+     {/* <h3>Tests:</h3>
       <p>Typed: {searchPostcode}</p>
-      <p>Typed: {searchSuburb}</p>
+      <p>Typed: {searchSuburb}</p>  */}
     </div>
   );
 }; // SearchForm()
