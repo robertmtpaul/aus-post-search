@@ -10,10 +10,11 @@ const SearchForm = () => {
     setSearchPostcode(event.target.value);
     console.log(searchPostcode);
   };
-  // const handleSuburbInput = (event) => {
-  //   setSearchSuburb(event.target.value);
-  //   console.log(searchSuburb);
-  // };
+  const handleSuburbInput = (event) => {
+    // Stores the value entered into suburb field into state using useState
+    setSearchSuburb(event.target.value);
+    console.log(searchSuburb);
+  };
 
   const handleSubmit = () => {
     AustpostSearch();
@@ -22,7 +23,10 @@ const SearchForm = () => {
   return (
     <div>
       <h2>Search address in Australia Post database</h2>
-      <form onSubmit={handleSubmit}>
+     
+      <form onSubmit={handleSubmit}
+      // Upon submitting the form, it runs handleSubmit function
+      >
         <label>Search by postcode</label>
         <input
           type="text"
@@ -30,18 +34,22 @@ const SearchForm = () => {
           placeholder="e.g. 5000"
         />
         <br />
+
         {/* TODO: add CSS breaks */}
 
-        {/* <label>Search by suburb</label>
+      <label>Search by suburb</label>
         <input
           type="text"
           onChange={handleSuburbInput}
           placeholder="e.g. Smithfield"
-        /> */}
+        />
         <br />
+        
         {/* TODO: add CSS breaks */}
-        <button onClick={handleSubmit}>Search address</button>
+        <button onClick={handleSubmit} //upon hitting button, runs handleSubmit
+        >Search address</button> 
       </form>
+
      {/* <h3>Tests:</h3>
       <p>Typed: {searchPostcode}</p>
       <p>Typed: {searchSuburb}</p>  */}

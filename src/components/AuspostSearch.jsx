@@ -4,11 +4,12 @@ import axios from 'axios';
 // Import the child components that this component will be using
 import SearchForm from './SearchForm';
 
+// Constants for API requests
 const BASE_URL = "https://digitalapi.auspost.com.au";
 const API_KEY = "872608e3-4530-4c6a-a369-052accb03ca8";
 
 
-const AustpostSearch = (postcode, state) => {
+const AuspostSearch = (postcode, state) => {
 	const [responseData, setResponseData] = useState("");
   
 	const fetchAuspostInfo = () => {
@@ -26,7 +27,7 @@ const AustpostSearch = (postcode, state) => {
 	  // 	  "state" : state
 	  // 	}
 	  //   })
-	  // Short-form axios request to API resource URL, custom headers
+	  // Short-form axios request to API resource URL, using custom headers
 	  axios
 		.get(BASE_URL, {
 		  q: postcode,
@@ -46,4 +47,4 @@ const AustpostSearch = (postcode, state) => {
 	}, []);
   };
 
-  export default AustpostSearch
+  export default AuspostSearch
