@@ -1,37 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
+import AustPostSearch from './AustPostSearch'
 
-
-const BASE_URL = `https://digitalapi.auspost.com.au/postcode/search`
-const API_KEY = '872608e3-4530-4c6a-a369-052accb03ca8'
-
-const performSearch = (postCode, state) => {
-
-  let [responseData, setResponseData] = React.useState('');
-
-  axios({
-    "method": "GET",
-    "url": "https://digitalapi.auspost.com.au/postcode/search",
-      "headers": {
-        "AUTH-KEY": "872608e3-4530-4c6a-a369-052accb03ca8"
-      }, "parameters": {
-        "q" : postCode,
-        "state" : state
-      }
-    })
-    .then((response => {
-      console.log('server response: ', response.data);
-      set
-    }, 
-    .catch((error) => {
-      console.log(error)
-    })
-  }, [] )
-
-
-
-
-const SearchForm = (props) => {
+const SearchForm = () => {
   //Pass to useState the initial value I want for this state
   const [searchPostcode, setSearchPostcode] = useState("");
   const [searchSuburb, setSearchSuburb] = useState("");
@@ -45,9 +16,8 @@ const SearchForm = (props) => {
   //   console.log(searchSuburb);
   // };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    performSearch()
+  const handleSubmit = () => {
+    // AustPostSearch();
   };
 
   return (
