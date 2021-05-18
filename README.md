@@ -1,5 +1,7 @@
 # AUSTPOSTSEARCH
 
+This is a React web-based app featuring a form that should check validity of a given entered postcode, suburb and state.
+
 ### INSTALLATION
 
 First clone the repository by running the following code in the browser:
@@ -26,6 +28,7 @@ You can try typing in a postcode and hitting Search Address, however due to lack
 
 ### PLANNED CHANGES/ADDITIONS
 
+- Add state form input field and relevant functions to SearchForm.jsx
 - Fix AustpostSearch.jsx so that hooks are used correctly or refactor as a class-based component;
 - Fix API call using axios;
 - Use react-form-hooks library for form validation and simplifying saving of entered data into state;
